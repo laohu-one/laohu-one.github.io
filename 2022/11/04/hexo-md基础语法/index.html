@@ -1,0 +1,232 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"><title>hexo-md基础语法 | laohu</title><meta name="author" content="侯昌虎"><meta name="copyright" content="侯昌虎"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="标题栏部分123456789101112---title: hexo-md基础语法  &#x2F;&#x2F;标题comments: true      &#x2F;&#x2F;评论toc: true       cover: https:&#x2F;&#x2F;tse2-mm.cn.bing.net&#x2F;th&#x2F;id&#x2F;OIP-C.RE5i4GavSQYYG1pjjkseeAHaEt?pid&#x3D;ImgDet&amp;rs&#x3D;1   &#x2F;&#x2F;封面图片categories:">
+<meta property="og:type" content="article">
+<meta property="og:title" content="hexo-md基础语法">
+<meta property="og:url" content="https://laohu-one.github.io/2022/11/04/hexo-md%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/index.html">
+<meta property="og:site_name" content="laohu">
+<meta property="og:description" content="标题栏部分123456789101112---title: hexo-md基础语法  &#x2F;&#x2F;标题comments: true      &#x2F;&#x2F;评论toc: true       cover: https:&#x2F;&#x2F;tse2-mm.cn.bing.net&#x2F;th&#x2F;id&#x2F;OIP-C.RE5i4GavSQYYG1pjjkseeAHaEt?pid&#x3D;ImgDet&amp;rs&#x3D;1   &#x2F;&#x2F;封面图片categories:">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://tse2-mm.cn.bing.net/th/id/OIP-C.RE5i4GavSQYYG1pjjkseeAHaEt?pid=ImgDet&rs=1">
+<meta property="article:published_time" content="2022-11-04T12:03:48.000Z">
+<meta property="article:modified_time" content="2022-11-15T11:27:41.941Z">
+<meta property="article:author" content="侯昌虎">
+<meta property="article:tag" content="md语法 hexo写作">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://tse2-mm.cn.bing.net/th/id/OIP-C.RE5i4GavSQYYG1pjjkseeAHaEt?pid=ImgDet&rs=1"><link rel="shortcut icon" href="https://s1.ax1x.com/2022/10/30/xIqc38.jpg"><link rel="canonical" href="https://laohu-one.github.io/2022/11/04/hexo-md%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":200},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: {"limitCount":50,"languages":{"author":"作者: 侯昌虎","link":"链接: ","source":"来源: laohu","info":"著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。"}},
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  }
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'hexo-md基础语法',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2022-11-15 19:27:41'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+    win.getCSS = url => new Promise((resolve, reject) => {
+      const link = document.createElement('link')
+      link.rel = 'stylesheet'
+      link.href = url
+      link.onload = () => resolve()
+      link.onerror = () => reject()
+      document.head.appendChild(link)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          const now = new Date()
+          const hour = now.getHours()
+          const isNight = hour <= 6 || hour >= 18
+          if (t === undefined) isNight ? activateDarkMode() : activateLightMode()
+          else if (t === 'light') activateLightMode()
+          else activateDarkMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 6.3.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://s1.ax1x.com/2022/10/30/xI6fiR.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">8</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">14</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">6</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-archive"></i><span> 归档</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-heartbeat"></i><span> 清单</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/List/gallery/"><i class="fa-fw fa fa-image"></i><span> 相册</span></a></li><li><a class="site-page child" href="/List/movies/"><i class="fa-fw fa fa-film"></i><span> 视频</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fa fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fa fa-heart"></i><span> 关于我</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://tse2-mm.cn.bing.net/th/id/OIP-C.RE5i4GavSQYYG1pjjkseeAHaEt?pid=ImgDet&amp;rs=1')"><nav id="nav"><span id="blog-info"><a href="/" title="laohu"><span class="site-name">laohu</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-archive"></i><span> 归档</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-heartbeat"></i><span> 清单</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/List/gallery/"><i class="fa-fw fa fa-image"></i><span> 相册</span></a></li><li><a class="site-page child" href="/List/movies/"><i class="fa-fw fa fa-film"></i><span> 视频</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fa fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fa fa-heart"></i><span> 关于我</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">hexo-md基础语法</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2022-11-04T12:03:48.000Z" title="发表于 2022-11-04 20:03:48">2022-11-04</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2022-11-15T11:27:41.941Z" title="更新于 2022-11-15 19:27:41">2022-11-15</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/hexo/">hexo</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="hexo-md基础语法"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h2 id="标题栏部分"><a href="#标题栏部分" class="headerlink" title="标题栏部分"></a>标题栏部分</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: hexo-md基础语法  //标题</span><br><span class="line">comments: true      //评论</span><br><span class="line">toc: true       </span><br><span class="line">cover: https://tse2-mm.cn.bing.net/th/id/OIP-C.RE5i4GavSQYYG1pjjkseeAHaEt?pid=ImgDet&amp;rs=1   //封面图片</span><br><span class="line">categories: hexo    //分类</span><br><span class="line">tags:</span><br><span class="line">  - md语法 hexo写作     //标签</span><br><span class="line">abbrlink: hexo1     //后缀</span><br><span class="line">date: 2022-11-04 20:03:48   //日期</span><br><span class="line">---</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>这段就是本篇文章的标题部分  已注释</p>
+<h2 id="标题部分"><a href="#标题部分" class="headerlink" title="标题部分"></a>标题部分</h2><p>使用 # 号可表示 1-6 级标题，一级标题对应一个 # 号，二级标题对应两个 # 号，以此类推。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"># 一级标题</span><br><span class="line">## 二级标题</span><br><span class="line">### 三级标题</span><br><span class="line">#### 四级标题</span><br><span class="line">##### 五级标题</span><br><span class="line">###### 六级标题</span><br></pre></td></tr></table></figure>
+
+<h2 id="段落"><a href="#段落" class="headerlink" title="段落"></a>段落</h2><p>1段落换行：用两个以上空格加回车</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">*斜体文本*</span><br><span class="line">_斜体文本_</span><br><span class="line">**粗体文本**</span><br><span class="line">__粗体文本__</span><br><span class="line">***粗斜体文本***</span><br><span class="line">___粗斜体文本___</span><br></pre></td></tr></table></figure>
+
+<p>3分割线：用三个以上的<em>（星号）、-（减号）、_ （下划线）建立分割线，行内不能有其他内容，可在</em>号或-号中间加入空格</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">***</span><br><span class="line">* * *</span><br><span class="line">*****</span><br><span class="line">- - -</span><br><span class="line">----------</span><br></pre></td></tr></table></figure>
+
+<p>4 删除线：在文字的两端加上两个波浪线<del>即可</del></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">~~我是要删除的内容~~</span><br></pre></td></tr></table></figure>
+
+<p>5 通过 HTML 的  </h1> 标签来实现 </h1></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;u&gt;带下划线文本&lt;/u&gt;</span><br></pre></td></tr></table></figure>
+
+<p>6 脚注：[^我是脚注]</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[^要注明的文本]</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h2 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h2><p>1.有序列表：使用 数字加 . 号加空格表示</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">1. 第一项</span><br><span class="line">2. 第二项</span><br><span class="line">3. 第三项</span><br></pre></td></tr></table></figure>
+
+<p>2.无序列表：使用星号()、加号(+)或减号(-*) 加空格表示</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">* 第一项</span><br><span class="line">* 第二项</span><br><span class="line">* 第三项</span><br><span class="line"></span><br><span class="line">+ 第一项</span><br><span class="line">+ 第二项</span><br><span class="line">+ 第三项</span><br><span class="line"></span><br><span class="line">- 第一项</span><br><span class="line">- 第二项</span><br><span class="line">- 第三项</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>3.嵌套列表：需在子列表中的选项前面添加四个空格</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">1. 第一项：</span><br><span class="line">    - 第一项嵌套的第一个元素</span><br><span class="line">    - 第一项嵌套的第二个元素</span><br><span class="line">2. 第二项：</span><br><span class="line">    - 第二项嵌套的第一个元素</span><br><span class="line">    - 第二项嵌套的第二个元素</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h2 id="区块"><a href="#区块" class="headerlink" title="区块"></a>区块</h2><p>1.区块引用：在段落开头使用 &gt; 符号加空格</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&gt; 区块引用</span><br><span class="line">&gt; 菜鸟教程</span><br><span class="line">&gt; 学的不仅是技术更是梦想</span><br></pre></td></tr></table></figure>
+
+<p>2.区块嵌套：一个 &gt; 符号是最外层，两个 &gt; 符号是第一层嵌套，以此类推</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&gt; 最外层</span><br><span class="line">&gt; &gt; 第一层嵌套</span><br><span class="line">&gt; &gt; &gt; 第二层嵌套</span><br></pre></td></tr></table></figure>
+
+<p>3.区块中使用列表</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&gt; 区块中使用列表</span><br><span class="line">&gt; 1. 第一项</span><br><span class="line">&gt; 2. 第二项</span><br><span class="line">&gt; + 第一项</span><br><span class="line">&gt; + 第二项</span><br><span class="line">&gt; + 第三项</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>4.列表中使用区块</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">* 第一项</span><br><span class="line">    &gt; 菜鸟教程</span><br><span class="line">    &gt; 学的不仅是技术更是梦想</span><br><span class="line">* 第二项</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h2 id="代码块"><a href="#代码块" class="headerlink" title="代码块"></a>代码块</h2><p>1.段落中的函数：函数前后使用反引号 <code>我是函数</code>包起来</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">`main()`函数</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>2.代码区块：用 4 个空格、一个制表符（Tab 键）或3个反引号表示</p>
+<h2 id="链接"><a href="#链接" class="headerlink" title="链接"></a>链接</h2><p>1.普通链接：<a href="%E9%93%BE%E6%8E%A5%E5%9C%B0%E5%9D%80">链接名称</a> 或 &lt;链接地址&gt;</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">这是一个链接 [菜鸟教程](https://www.runoob.com)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>2.高级链接：通过变量设置一个链接，变量在文档末尾赋值</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">这个链接用 a 作为网址变量 [Google][a]</span><br><span class="line">这个链接用 b 作为网址变量 [Runoob][b]</span><br><span class="line">然后在文档的结尾为变量赋值（网址）</span><br><span class="line"></span><br><span class="line">  [a]: http://www.google.com/</span><br><span class="line">  [b]: http://www.runoob.com/</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h2 id="图片"><a href="#图片" class="headerlink" title="图片"></a>图片</h2><p>1.语法格式：<img src="/%E5%9B%BE%E7%89%87%E5%9C%B0%E5%9D%80" alt="alt 属性文本">或<img src="/%E5%9B%BE%E7%89%87%E5%9C%B0%E5%9D%80" alt="alt 属性文本" title="可选标题"></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">![RUNOOB 图标](http://static.runoob.com/images/runoob-logo.png)</span><br><span class="line">![RUNOOB 图标](http://static.runoob.com/images/runoob-logo.png &quot;RUNOOB&quot;)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>2.图片使用变量</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">* 第一项</span><br><span class="line">    &gt; 菜鸟教程</span><br><span class="line">    &gt; 学的不仅是技术更是梦想</span><br><span class="line">* 第二项</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>2.列表中使用区块</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">这个链接用 a 作为网址变量 [RUNOOB][a].</span><br><span class="line">然后在文档的结尾为变量赋值（网址）</span><br><span class="line"></span><br><span class="line">[a]: http://static.runoob.com/images/runoob-logo.png</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>3.使用本地图片</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">![C中也有](/images/fpga/fpga02.png)  </span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>hexo 中需添加到 source 文件夹中 添加到 _posts 中不起作用</p>
+<h2 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h2><p>1.语法：使用 | 来分隔不同的单元格，使用 - 来分隔表头和其他行</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">|  表头   | 表头  |</span><br><span class="line">|  ----  | ----  |</span><br><span class="line">| 单元格  | 单元格 |</span><br><span class="line">| 单元格  | 单元格 |</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>2.对齐方式</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">| 左对齐 | 右对齐 | 居中对齐 |</span><br><span class="line">| :-----| ----: | :----: |</span><br><span class="line">| 单元格 | 单元格 | 单元格 |</span><br><span class="line">| 单元格 | 单元格 | 单元格 |</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="https://laohu-one.github.io">侯昌虎</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://laohu-one.github.io/2022/11/04/hexo-md%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/">https://laohu-one.github.io/2022/11/04/hexo-md%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://laohu-one.github.io" target="_blank">laohu</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/md%E8%AF%AD%E6%B3%95-hexo%E5%86%99%E4%BD%9C/">md语法 hexo写作</a></div><div class="post_share"><div class="social-share" data-image="https://tse2-mm.cn.bing.net/th/id/OIP-C.RE5i4GavSQYYG1pjjkseeAHaEt?pid=ImgDet&amp;rs=1" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2022/11/15/%E9%98%BF%E9%87%8C%E4%BA%91%E5%A4%9A%E4%B8%AA%E8%AE%BE%E5%A4%87MQTT%E4%BA%92%E8%BF%9E/" title="阿里云多个设备MQTT互连"><img class="cover" src="https://ts1.cn.mm.bing.net/th/id/R-C.09c68d2c2b81331c445b4fcb765c3fb5?rik=WUX02mg6ZJu%2f1g&amp;riu=http%3a%2f%2fimg.sccnn.com%2fbimg%2f338%2f68362.jpg&amp;ehk=lXS0C1MgxM0%2bwPKsIfCsncaVYMy0anKFRQXl2EkC1Go%3d&amp;risl=&amp;pid=ImgRaw&amp;r=0" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">阿里云多个设备MQTT互连</div></div></a></div><div class="next-post pull-right"><a href="/2022/11/02/FPGA%E2%80%94%E2%80%94verilog%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/" title="FPGA- Verilog基础知识"><img class="cover" src="https://www.fpga-china.com/wp-content/uploads/2019/12/6-1576737786.jpeg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">FPGA- Verilog基础知识</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://s1.ax1x.com/2022/10/30/xI6fiR.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">侯昌虎</div><div class="author-info__description">跟着心走，那就是对的</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">8</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">14</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">6</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A0%87%E9%A2%98%E6%A0%8F%E9%83%A8%E5%88%86"><span class="toc-number">1.</span> <span class="toc-text">标题栏部分</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A0%87%E9%A2%98%E9%83%A8%E5%88%86"><span class="toc-number">2.</span> <span class="toc-text">标题部分</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%AE%B5%E8%90%BD"><span class="toc-number">3.</span> <span class="toc-text">段落</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%97%E8%A1%A8"><span class="toc-number">4.</span> <span class="toc-text">列表</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8C%BA%E5%9D%97"><span class="toc-number">5.</span> <span class="toc-text">区块</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BB%A3%E7%A0%81%E5%9D%97"><span class="toc-number">6.</span> <span class="toc-text">代码块</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%93%BE%E6%8E%A5"><span class="toc-number">7.</span> <span class="toc-text">链接</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%BE%E7%89%87"><span class="toc-number">8.</span> <span class="toc-text">图片</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%A1%A8%E6%A0%BC"><span class="toc-number">9.</span> <span class="toc-text">表格</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2022/11/17/%E2%80%9C%E5%9B%9E%E5%BF%86%E5%BD%95-%E6%AF%95%E8%AE%BE-%E6%9D%BF%E7%90%83%E6%8E%A7%E5%88%B6%E7%B3%BB%E7%BB%9F%E2%80%9D/" title="“回忆录-(本科毕设)板球控制系统”"><img src="https://s1.ax1x.com/2022/11/17/zevjdH.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="“回忆录-(本科毕设)板球控制系统”"/></a><div class="content"><a class="title" href="/2022/11/17/%E2%80%9C%E5%9B%9E%E5%BF%86%E5%BD%95-%E6%AF%95%E8%AE%BE-%E6%9D%BF%E7%90%83%E6%8E%A7%E5%88%B6%E7%B3%BB%E7%BB%9F%E2%80%9D/" title="“回忆录-(本科毕设)板球控制系统”">“回忆录-(本科毕设)板球控制系统”</a><time datetime="2022-11-17T02:45:00.000Z" title="发表于 2022-11-17 10:45:00">2022-11-17</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/11/17/app%E6%8E%A7%E5%88%B6%E7%94%B5%E8%84%91%E5%BC%80%E6%9C%BA/" title="app控制电脑开机（测试版）"><img src="https://s1.ax1x.com/2022/11/17/zeY3sx.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="app控制电脑开机（测试版）"/></a><div class="content"><a class="title" href="/2022/11/17/app%E6%8E%A7%E5%88%B6%E7%94%B5%E8%84%91%E5%BC%80%E6%9C%BA/" title="app控制电脑开机（测试版）">app控制电脑开机（测试版）</a><time datetime="2022-11-17T01:09:33.000Z" title="发表于 2022-11-17 09:09:33">2022-11-17</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/11/16/bat%E8%84%9A%E6%9C%AC-%E8%87%AA%E5%8A%A8%E8%BF%9E%E6%8E%A5-%E6%96%AD%E5%BC%80%E5%AE%BD%E5%B8%A6/" title="CMD bat脚本-自动连接/断开宽带"><img src="https://i1.wp.com/www.prophethacker.com/wp-content/uploads/2016/08/best-cmd-commands-use-in-hacking.png?fit=1920%2C932&amp;ssl=1" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="CMD bat脚本-自动连接/断开宽带"/></a><div class="content"><a class="title" href="/2022/11/16/bat%E8%84%9A%E6%9C%AC-%E8%87%AA%E5%8A%A8%E8%BF%9E%E6%8E%A5-%E6%96%AD%E5%BC%80%E5%AE%BD%E5%B8%A6/" title="CMD bat脚本-自动连接/断开宽带">CMD bat脚本-自动连接/断开宽带</a><time datetime="2022-11-16T13:45:32.000Z" title="发表于 2022-11-16 21:45:32">2022-11-16</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/11/16/%E9%98%BF%E9%87%8C%E4%BA%91MQTT%E6%9C%8D%E5%8A%A1%E5%99%A8-%E7%BB%AD/" title="阿里云MQTT服务器(续)"><img src="https://ts1.cn.mm.bing.net/th/id/R-C.09c68d2c2b81331c445b4fcb765c3fb5?rik=WUX02mg6ZJu%2f1g&amp;riu=http%3a%2f%2fimg.sccnn.com%2fbimg%2f338%2f68362.jpg&amp;ehk=lXS0C1MgxM0%2bwPKsIfCsncaVYMy0anKFRQXl2EkC1Go%3d&amp;risl=&amp;pid=ImgRaw&amp;r=0" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="阿里云MQTT服务器(续)"/></a><div class="content"><a class="title" href="/2022/11/16/%E9%98%BF%E9%87%8C%E4%BA%91MQTT%E6%9C%8D%E5%8A%A1%E5%99%A8-%E7%BB%AD/" title="阿里云MQTT服务器(续)">阿里云MQTT服务器(续)</a><time datetime="2022-11-16T01:37:44.000Z" title="发表于 2022-11-16 09:37:44">2022-11-16</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/11/15/%E9%98%BF%E9%87%8C%E4%BA%91%E5%A4%9A%E4%B8%AA%E8%AE%BE%E5%A4%87MQTT%E4%BA%92%E8%BF%9E/" title="阿里云多个设备MQTT互连"><img src="https://ts1.cn.mm.bing.net/th/id/R-C.09c68d2c2b81331c445b4fcb765c3fb5?rik=WUX02mg6ZJu%2f1g&amp;riu=http%3a%2f%2fimg.sccnn.com%2fbimg%2f338%2f68362.jpg&amp;ehk=lXS0C1MgxM0%2bwPKsIfCsncaVYMy0anKFRQXl2EkC1Go%3d&amp;risl=&amp;pid=ImgRaw&amp;r=0" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="阿里云多个设备MQTT互连"/></a><div class="content"><a class="title" href="/2022/11/15/%E9%98%BF%E9%87%8C%E4%BA%91%E5%A4%9A%E4%B8%AA%E8%AE%BE%E5%A4%87MQTT%E4%BA%92%E8%BF%9E/" title="阿里云多个设备MQTT互连">阿里云多个设备MQTT互连</a><time datetime="2022-11-15T07:51:27.000Z" title="发表于 2022-11-15 15:51:27">2022-11-15</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2023 By 侯昌虎</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.min.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
