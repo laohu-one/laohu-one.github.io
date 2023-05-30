@@ -1,0 +1,284 @@
+<!DOCTYPE html><html lang="zh" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>hexo-md基础语法 | LaohuのBlog</title><meta name="author" content="侯昌虎"><meta name="copyright" content="侯昌虎"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="标题栏部分---title: hexo-md基础语法  &#x2F;&#x2F;标题comments: true      &#x2F;&#x2F;评论toc: true       cover: https:&#x2F;&#x2F;tse2-mm.cn.bing.net&#x2F;th&#x2F;id&#x2F;OIP-C.RE5i4GavSQYYG1pjjkseeAHaEt?pid&#x3D;ImgDet&amp;rs&#x3D;1   &#x2F;&#x2F;封面图片categories: hexo    &#x2F;&#x2F;分类ta">
+<meta property="og:type" content="article">
+<meta property="og:title" content="hexo-md基础语法">
+<meta property="og:url" content="https://laohu-one.github.io/2022/11/04/05-hexo-md%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/index.html">
+<meta property="og:site_name" content="LaohuのBlog">
+<meta property="og:description" content="标题栏部分---title: hexo-md基础语法  &#x2F;&#x2F;标题comments: true      &#x2F;&#x2F;评论toc: true       cover: https:&#x2F;&#x2F;tse2-mm.cn.bing.net&#x2F;th&#x2F;id&#x2F;OIP-C.RE5i4GavSQYYG1pjjkseeAHaEt?pid&#x3D;ImgDet&amp;rs&#x3D;1   &#x2F;&#x2F;封面图片categories: hexo    &#x2F;&#x2F;分类ta">
+<meta property="og:locale">
+<meta property="og:image" content="https://tse2-mm.cn.bing.net/th/id/OIP-C.RE5i4GavSQYYG1pjjkseeAHaEt?pid=ImgDet&rs=1">
+<meta property="article:published_time" content="2022-11-04T12:03:48.000Z">
+<meta property="article:modified_time" content="2023-05-29T01:37:01.189Z">
+<meta property="article:author" content="侯昌虎">
+<meta property="article:tag" content="md语法 ">
+<meta property="article:tag" content="hexo">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://tse2-mm.cn.bing.net/th/id/OIP-C.RE5i4GavSQYYG1pjjkseeAHaEt?pid=ImgDet&rs=1"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://laohu-one.github.io/2022/11/04/05-hexo-md%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":230},
+  copy: {
+    success: 'Copy successfully',
+    error: 'Copy error',
+    noSupport: 'The browser does not support'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: 'Just',
+    min: 'minutes ago',
+    hour: 'hours ago',
+    day: 'days ago',
+    month: 'months ago'
+  },
+  copyright: {"limitCount":80,"languages":{"author":"Author: 侯昌虎","link":"Link: ","source":"Source: LaohuのBlog","info":"Copyright is owned by the author. For commercial reprints, please contact the author for authorization. For non-commercial reprints, please indicate the source."}},
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'hexo-md基础语法',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2023-05-29 09:37:01'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+    win.getCSS = (url,id = false) => new Promise((resolve, reject) => {
+      const link = document.createElement('link')
+      link.rel = 'stylesheet'
+      link.href = url
+      if (id) link.id = id
+      link.onerror = reject
+      link.onload = link.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        link.onload = link.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(link)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 6.3.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/touxiang.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">20</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">28</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">9</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 目录</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 娱乐</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> Movie</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于我</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://tse2-mm.cn.bing.net/th/id/OIP-C.RE5i4GavSQYYG1pjjkseeAHaEt?pid=ImgDet&amp;rs=1')"><nav id="nav"><span id="blog-info"><a href="/" title="LaohuのBlog"><span class="site-name">LaohuのBlog</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 目录</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 娱乐</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> Movie</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于我</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">hexo-md基础语法</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">Created</span><time class="post-meta-date-created" datetime="2022-11-04T12:03:48.000Z" title="Created 2022-11-04 20:03:48">2022-11-04</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2023-05-29T01:37:01.189Z" title="Updated 2023-05-29 09:37:01">2023-05-29</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/hexo/">hexo</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="hexo-md基础语法"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">Post View:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h2 id="标题栏部分"><a href="#标题栏部分" class="headerlink" title="标题栏部分"></a>标题栏部分</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: hexo-md基础语法  //标题</span><br><span class="line">comments: true      //评论</span><br><span class="line">toc: true       </span><br><span class="line">cover: https://tse2-mm.cn.bing.net/th/id/OIP-C.RE5i4GavSQYYG1pjjkseeAHaEt?pid=ImgDet&amp;rs=1   //封面图片</span><br><span class="line">categories: hexo    //分类</span><br><span class="line">tags:</span><br><span class="line">  - md语法 hexo写作     //标签</span><br><span class="line">abbrlink: hexo1     //后缀</span><br><span class="line">date: 2022-11-04 20:03:48   //日期</span><br><span class="line">---</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>这段就是本篇文章的标题部分  已注释</p>
+<h2 id="标题部分"><a href="#标题部分" class="headerlink" title="标题部分"></a>标题部分</h2><p>使用 # 号可表示 1-6 级标题，一级标题对应一个 # 号，二级标题对应两个 # 号，以此类推。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 一级标题</span><br><span class="line">## 二级标题</span><br><span class="line">### 三级标题</span><br><span class="line">#### 四级标题</span><br><span class="line">##### 五级标题</span><br><span class="line">###### 六级标题</span><br></pre></td></tr></table></figure>
+
+<h2 id="段落"><a href="#段落" class="headerlink" title="段落"></a>段落</h2><p>1段落换行：用两个以上空格加回车</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">*斜体文本*</span><br><span class="line">_斜体文本_</span><br><span class="line">**粗体文本**</span><br><span class="line">__粗体文本__</span><br><span class="line">***粗斜体文本***</span><br><span class="line">___粗斜体文本___</span><br></pre></td></tr></table></figure>
+
+<p>3分割线：用三个以上的<em>（星号）、-（减号）、_ （下划线）建立分割线，行内不能有其他内容，可在</em>号或-号中间加入空格</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">***</span><br><span class="line">* * *</span><br><span class="line">*****</span><br><span class="line">- - -</span><br><span class="line">----------</span><br></pre></td></tr></table></figure>
+
+<p>4 删除线：在文字的两端加上两个波浪线<del>即可</del></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">~~我是要删除的内容~~</span><br></pre></td></tr></table></figure>
+
+<p>5 通过 HTML 的  </h1> 标签来实现 </h1></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;u&gt;带下划线文本&lt;/u&gt;</span><br></pre></td></tr></table></figure>
+
+<p>6 脚注：[^我是脚注]</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">[^要注明的文本]</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h2 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h2><p>1.有序列表：使用 数字加 . 号加空格表示</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">1. 第一项</span><br><span class="line">2. 第二项</span><br><span class="line">3. 第三项</span><br></pre></td></tr></table></figure>
+
+<p>2.无序列表：使用星号()、加号(+)或减号(-*) 加空格表示</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">* 第一项</span><br><span class="line">* 第二项</span><br><span class="line">* 第三项</span><br><span class="line"></span><br><span class="line">+ 第一项</span><br><span class="line">+ 第二项</span><br><span class="line">+ 第三项</span><br><span class="line"></span><br><span class="line">- 第一项</span><br><span class="line">- 第二项</span><br><span class="line">- 第三项</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>3.嵌套列表：需在子列表中的选项前面添加四个空格</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">1. 第一项：</span><br><span class="line">    - 第一项嵌套的第一个元素</span><br><span class="line">    - 第一项嵌套的第二个元素</span><br><span class="line">2. 第二项：</span><br><span class="line">    - 第二项嵌套的第一个元素</span><br><span class="line">    - 第二项嵌套的第二个元素</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h2 id="区块"><a href="#区块" class="headerlink" title="区块"></a>区块</h2><p>1.区块引用：在段落开头使用 &gt; 符号加空格</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&gt; 区块引用</span><br><span class="line">&gt; 菜鸟教程</span><br><span class="line">&gt; 学的不仅是技术更是梦想</span><br></pre></td></tr></table></figure>
+
+<p>2.区块嵌套：一个 &gt; 符号是最外层，两个 &gt; 符号是第一层嵌套，以此类推</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&gt; 最外层</span><br><span class="line">&gt; &gt; 第一层嵌套</span><br><span class="line">&gt; &gt; &gt; 第二层嵌套</span><br></pre></td></tr></table></figure>
+
+<p>3.区块中使用列表</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&gt; 区块中使用列表</span><br><span class="line">&gt; 1. 第一项</span><br><span class="line">&gt; 2. 第二项</span><br><span class="line">&gt; + 第一项</span><br><span class="line">&gt; + 第二项</span><br><span class="line">&gt; + 第三项</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>4.列表中使用区块</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">* 第一项</span><br><span class="line">    &gt; 菜鸟教程</span><br><span class="line">    &gt; 学的不仅是技术更是梦想</span><br><span class="line">* 第二项</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h2 id="代码块"><a href="#代码块" class="headerlink" title="代码块"></a>代码块</h2><p>1.段落中的函数：函数前后使用反引号 <code>我是函数</code>包起来</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">`main()`函数</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>2.代码区块：用 4 个空格、一个制表符（Tab 键）或3个反引号表示</p>
+<h2 id="链接"><a href="#链接" class="headerlink" title="链接"></a>链接</h2><p>1.普通链接：<a href="%E9%93%BE%E6%8E%A5%E5%9C%B0%E5%9D%80">链接名称</a> 或 &lt;链接地址&gt;</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">这是一个链接 [菜鸟教程](https://www.runoob.com)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>2.高级链接：通过变量设置一个链接，变量在文档末尾赋值</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">这个链接用 a 作为网址变量 [Google][a]</span><br><span class="line">这个链接用 b 作为网址变量 [Runoob][b]</span><br><span class="line">然后在文档的结尾为变量赋值（网址）</span><br><span class="line"></span><br><span class="line">  [a]: http://www.google.com/</span><br><span class="line">  [b]: http://www.runoob.com/</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h2 id="图片"><a href="#图片" class="headerlink" title="图片"></a>图片</h2><p>1.语法格式：<img src="/%E5%9B%BE%E7%89%87%E5%9C%B0%E5%9D%80" alt="alt 属性文本">或<img src="/%E5%9B%BE%E7%89%87%E5%9C%B0%E5%9D%80" alt="alt 属性文本" title="可选标题"></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">![RUNOOB 图标](http://static.runoob.com/images/runoob-logo.png)</span><br><span class="line">![RUNOOB 图标](http://static.runoob.com/images/runoob-logo.png &quot;RUNOOB&quot;)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>2.图片使用变量</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">* 第一项</span><br><span class="line">    &gt; 菜鸟教程</span><br><span class="line">    &gt; 学的不仅是技术更是梦想</span><br><span class="line">* 第二项</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>2.列表中使用区块</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">这个链接用 a 作为网址变量 [RUNOOB][a].</span><br><span class="line">然后在文档的结尾为变量赋值（网址）</span><br><span class="line"></span><br><span class="line">[a]: http://static.runoob.com/images/runoob-logo.png</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>3.使用本地图片</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">![C中也有](/images/fpga/fpga02.png)  </span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>hexo 中需添加到 source 文件夹中 添加到 _posts 中不起作用</p>
+<h2 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h2><p>1.语法：使用 | 来分隔不同的单元格，使用 - 来分隔表头和其他行</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">|  表头   | 表头  |</span><br><span class="line">|  ----  | ----  |</span><br><span class="line">| 单元格  | 单元格 |</span><br><span class="line">| 单元格  | 单元格 |</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>2.对齐方式</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">| 左对齐 | 右对齐 | 居中对齐 |</span><br><span class="line">| :-----| ----: | :----: |</span><br><span class="line">| 单元格 | 单元格 | 单元格 |</span><br><span class="line">| 单元格 | 单元格 | 单元格 |</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">Author: </span><span class="post-copyright-info"><a href="https://laohu-one.github.io">侯昌虎</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">Link: </span><span class="post-copyright-info"><a href="https://laohu-one.github.io/2022/11/04/05-hexo-md%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/">https://laohu-one.github.io/2022/11/04/05-hexo-md%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">Copyright Notice: </span><span class="post-copyright-info">All articles in this blog are licensed under <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> unless stating additionally.</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/md%E8%AF%AD%E6%B3%95/">md语法 </a><a class="post-meta__tags" href="/tags/hexo/">hexo</a></div><div class="post_share"><div class="social-share" data-image="https://tse2-mm.cn.bing.net/th/id/OIP-C.RE5i4GavSQYYG1pjjkseeAHaEt?pid=ImgDet&amp;rs=1" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2022/11/15/06-%E9%98%BF%E9%87%8C%E4%BA%91%E5%A4%9A%E4%B8%AA%E8%AE%BE%E5%A4%87MQTT%E4%BA%92%E8%BF%9E/" title="阿里云多个设备MQTT互连"><img class="cover" src="https://ts1.cn.mm.bing.net/th/id/R-C.09c68d2c2b81331c445b4fcb765c3fb5?rik=WUX02mg6ZJu%2f1g&amp;riu=http%3a%2f%2fimg.sccnn.com%2fbimg%2f338%2f68362.jpg&amp;ehk=lXS0C1MgxM0%2bwPKsIfCsncaVYMy0anKFRQXl2EkC1Go%3d&amp;risl=&amp;pid=ImgRaw&amp;r=0" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">Previous Post</div><div class="prev_info">阿里云多个设备MQTT互连</div></div></a></div><div class="next-post pull-right"><a href="/2022/11/02/04-FPGA%E2%80%94%E2%80%94verilog%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/" title="FPGA- Verilog基础知识"><img class="cover" src="https://www.fpga-china.com/wp-content/uploads/2019/12/6-1576737786.jpeg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">Next Post</div><div class="next_info">FPGA- Verilog基础知识</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>Related Articles</span></div><div class="relatedPosts-list"><div><a href="/2023/05/29/hexo-%E5%88%87%E6%8D%A2%E4%B8%BB%E9%A2%98/" title="hexo-切换主题"><img class="cover" src="https://tse3-mm.cn.bing.net/th/id/OIP-C.nzZHvPW4TzWzHEnMhVZLsgHaEK?pid=ImgDet&rs=1" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-05-29</div><div class="title">hexo-切换主题</div></div></a></div></div></div><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> Comment</span></div></div><div class="comment-wrap"><div><div id="twikoo-wrap"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/img/touxiang.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">侯昌虎</div><div class="author-info__description">跟着心走，那就是对的</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">20</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">28</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">9</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/laohu-one"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/laohu-one" target="_blank" title="Github"><i class="fab fa-github" style="color: #24292e;"></i></a><a class="social-icon" href="mailto:424362229@qq.com" target="_blank" title="Email"><i class="fas fa-envelope" style="color: #4a7dbe;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>Announcement</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>Catalog</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A0%87%E9%A2%98%E6%A0%8F%E9%83%A8%E5%88%86"><span class="toc-number">1.</span> <span class="toc-text">标题栏部分</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A0%87%E9%A2%98%E9%83%A8%E5%88%86"><span class="toc-number">2.</span> <span class="toc-text">标题部分</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%AE%B5%E8%90%BD"><span class="toc-number">3.</span> <span class="toc-text">段落</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%97%E8%A1%A8"><span class="toc-number">4.</span> <span class="toc-text">列表</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8C%BA%E5%9D%97"><span class="toc-number">5.</span> <span class="toc-text">区块</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BB%A3%E7%A0%81%E5%9D%97"><span class="toc-number">6.</span> <span class="toc-text">代码块</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%93%BE%E6%8E%A5"><span class="toc-number">7.</span> <span class="toc-text">链接</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%BE%E7%89%87"><span class="toc-number">8.</span> <span class="toc-text">图片</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%A1%A8%E6%A0%BC"><span class="toc-number">9.</span> <span class="toc-text">表格</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Post</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2023/05/29/hexo-%E5%88%87%E6%8D%A2%E4%B8%BB%E9%A2%98/" title="hexo-切换主题"><img src="https://tse3-mm.cn.bing.net/th/id/OIP-C.nzZHvPW4TzWzHEnMhVZLsgHaEK?pid=ImgDet&amp;rs=1" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="hexo-切换主题"/></a><div class="content"><a class="title" href="/2023/05/29/hexo-%E5%88%87%E6%8D%A2%E4%B8%BB%E9%A2%98/" title="hexo-切换主题">hexo-切换主题</a><time datetime="2023-05-29T03:20:34.000Z" title="Created 2023-05-29 11:20:34">2023-05-29</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/05/24/19-hexo-docker%E9%83%A8%E7%BD%B2%E7%AC%94%E8%AE%B0/" title="hexo docker部署笔记">hexo docker部署笔记</a><time datetime="2023-05-24T10:37:17.000Z" title="Created 2023-05-24 18:37:17">2023-05-24</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/04/09/18-ubuntu-%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/" title="Ubuntu 软件安装"><img src="https://tse3-mm.cn.bing.net/th/id/OIP-C.nzZHvPW4TzWzHEnMhVZLsgHaEK?pid=ImgDet&amp;rs=1" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Ubuntu 软件安装"/></a><div class="content"><a class="title" href="/2023/04/09/18-ubuntu-%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/" title="Ubuntu 软件安装">Ubuntu 软件安装</a><time datetime="2023-04-09T07:43:00.000Z" title="Created 2023-04-09 15:43:00">2023-04-09</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/03/19/17-frp-%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F-%E8%BF%9C%E7%A8%8B%E8%AE%BF%E9%97%AE%E5%AE%B6%E4%B8%AD%E7%94%B5%E8%84%91/" title="“frp-内网穿透-远程访问家中电脑”"><img src="https://pic2.zhimg.com/80/v2-bebad73666764388926f4c46b0c4b429_720w.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="“frp-内网穿透-远程访问家中电脑”"/></a><div class="content"><a class="title" href="/2023/03/19/17-frp-%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F-%E8%BF%9C%E7%A8%8B%E8%AE%BF%E9%97%AE%E5%AE%B6%E4%B8%AD%E7%94%B5%E8%84%91/" title="“frp-内网穿透-远程访问家中电脑”">“frp-内网穿透-远程访问家中电脑”</a><time datetime="2023-03-19T01:32:00.000Z" title="Created 2023-03-19 09:32:00">2023-03-19</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/03/15/16-petalinux%E6%93%8D%E4%BD%9C%E7%AC%94%E8%AE%B0/" title="“petalinux操作笔记”"><img src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fc-ssl.duitang.com%2Fuploads%2Fblog%2F202104%2F22%2F20210422220415_2e4bd.jpg&amp;refer=http%3A%2F%2Fc-ssl.duitang.com&amp;app=2002&amp;size=f9999,10000&amp;q=a80&amp;n=0&amp;g=0n&amp;fmt=auto?sec=1681472116&amp;t=5fc793f6aa64ff88aa186fa857b5e125" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="“petalinux操作笔记”"/></a><div class="content"><a class="title" href="/2023/03/15/16-petalinux%E6%93%8D%E4%BD%9C%E7%AC%94%E8%AE%B0/" title="“petalinux操作笔记”">“petalinux操作笔记”</a><time datetime="2023-03-15T11:35:34.000Z" title="Created 2023-03-15 19:35:34">2023-03-15</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2023 By 侯昌虎</div><div class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="Read Mode"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="Toggle Between Light And Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle between single-column and double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="Setting"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="Table Of Contents"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="Scroll To Comments"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="Back To Top"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.umd.min.js"></script><div class="js-pjax"><script>(()=>{
+  const init = () => {
+    twikoo.init(Object.assign({
+      el: '#twikoo-wrap',
+      envId: 'http://sv.laohu.space:4001',
+      region: '',
+      onCommentLoaded: function () {
+        btf.loadLightbox(document.querySelectorAll('#twikoo .tk-content img:not(.tk-owo-emotion)'))
+      }
+    }, null))
+  }
+
+  const getCount = () => {
+    const countELement = document.getElementById('twikoo-count')
+    if(!countELement) return
+    twikoo.getCommentsCount({
+      envId: 'http://sv.laohu.space:4001',
+      region: '',
+      urls: [window.location.pathname],
+      includeReply: false
+    }).then(function (res) {
+      countELement.textContent = res[0].count
+    }).catch(function (err) {
+      console.error(err);
+    });
+  }
+
+  const runFn = () => {
+    init()
+    
+  }
+
+  const loadTwikoo = () => {
+    if (typeof twikoo === 'object') {
+      setTimeout(runFn,0)
+      return
+    } 
+    getScript('https://cdn.jsdelivr.net/npm/twikoo/dist/twikoo.all.min.js').then(runFn)
+  }
+
+  if ('Twikoo' === 'Twikoo' || !false) {
+    if (false) btf.loadComment(document.getElementById('twikoo-wrap'), loadTwikoo)
+    else loadTwikoo()
+  } else {
+    window.loadOtherComment = () => {
+      loadTwikoo()
+    }
+  }
+})()</script></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>

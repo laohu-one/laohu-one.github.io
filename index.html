@@ -1,323 +1,214 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8">
-  
-  
-  <title>Hexo</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://example.com/index.html">
-<meta property="og:site_name" content="Hexo">
-<meta property="og:locale" content="en_US">
-<meta property="article:author" content="John Doe">
+<!DOCTYPE html><html lang="zh" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>LaohuのBlog</title><meta name="author" content="侯昌虎"><meta name="copyright" content="侯昌虎"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="跟着心走，那就是对的">
+<meta property="og:type" content="website">
+<meta property="og:title" content="LaohuのBlog">
+<meta property="og:url" content="https://laohu-one.github.io/index.html">
+<meta property="og:site_name" content="LaohuのBlog">
+<meta property="og:description" content="跟着心走，那就是对的">
+<meta property="og:locale">
+<meta property="og:image" content="https://laohu-one.github.io/img/touxiang.jpg">
+<meta property="article:author" content="侯昌虎">
+<meta property="article:tag" content="嵌入式 工控 计算机 生活点滴">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://laohu-one.github.io/img/touxiang.jpg"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://laohu-one.github.io/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":230},
+  copy: {
+    success: 'Copy successfully',
+    error: 'Copy error',
+    noSupport: 'The browser does not support'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: 'Just',
+    min: 'minutes ago',
+    hour: 'hours ago',
+    day: 'days ago',
+    month: 'months ago'
+  },
+  copyright: {"limitCount":80,"languages":{"author":"Author: 侯昌虎","link":"Link: ","source":"Source: LaohuのBlog","info":"Copyright is owned by the author. For commercial reprints, please contact the author for authorization. For non-commercial reprints, please indicate the source."}},
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'LaohuのBlog',
+  isPost: false,
+  isHome: true,
+  isHighlightShrink: false,
+  isToc: false,
+  postUpdate: '2023-05-30 10:38:42'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
   
-    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
   
+    win.getCSS = (url,id = false) => new Promise((resolve, reject) => {
+      const link = document.createElement('link')
+      link.rel = 'stylesheet'
+      link.href = url
+      if (id) link.id = id
+      link.onerror = reject
+      link.onload = link.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        link.onload = link.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(link)
+    })
   
-    <link rel="shortcut icon" href="/favicon.png">
-  
-  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
     
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
-
-  
-  
-<link rel="stylesheet" href="/css/style.css">
-
-  
-    
-<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
-
-  
-  
-<meta name="generator" content="Hexo 6.3.0"></head>
-
-<body>
-  <div id="container">
-    <div id="wrap">
-      <header id="header">
-  <div id="banner"></div>
-  <div id="header-outer" class="outer">
-    <div id="header-title" class="inner">
-      <h1 id="logo-wrap">
-        <a href="/" id="logo">Hexo</a>
-      </h1>
-      
-    </div>
-    <div id="header-inner" class="inner">
-      <nav id="main-nav">
-        <a id="main-nav-toggle" class="nav-icon"><span class="fa fa-bars"></span></a>
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
         
-          <a class="main-nav-link" href="/">Home</a>
-        
-          <a class="main-nav-link" href="/archives">Archives</a>
-        
-      </nav>
-      <nav id="sub-nav">
-        
-        
-          <a class="nav-icon" href="/atom.xml" title="RSS Feed"><span class="fa fa-rss"></span></a>
-        
-        <a class="nav-icon nav-search-btn" title="Search"><span class="fa fa-search"></span></a>
-      </nav>
-      <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
-      </div>
-    </div>
-  </div>
-</header>
-
-      <div class="outer">
-        <section id="main">
-  
-    <article id="post-hexo-docker部署笔记" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2023/05/24/hexo-docker%E9%83%A8%E7%BD%B2%E7%AC%94%E8%AE%B0/" class="article-date">
-  <time class="dt-published" datetime="2023-05-24T10:37:17.000Z" itemprop="datePublished">2023-05-24</time>
-</a>
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
     
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2023/05/24/hexo-docker%E9%83%A8%E7%BD%B2%E7%AC%94%E8%AE%B0/">hexo docker部署笔记</a>
-    </h1>
-  
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 6.3.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/touxiang.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">20</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">28</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">9</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 目录</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 娱乐</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> Movie</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于我</span></a></div></div></div></div><div class="page" id="body-wrap"><header class="full_page" id="page-header" style="background-image: url('/img/beijing.jpg')"><nav id="nav"><span id="blog-info"><a href="/" title="LaohuのBlog"><span class="site-name">LaohuのBlog</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 目录</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 娱乐</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> Movie</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于我</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="site-info"><h1 id="site-title">LaohuのBlog</h1><div id="site_social_icons"><a class="social-icon" href="https://github.com/laohu-one" target="_blank" title="Github"><i class="fab fa-github" style="color: #24292e;"></i></a><a class="social-icon" href="mailto:424362229@qq.com" target="_blank" title="Email"><i class="fas fa-envelope" style="color: #4a7dbe;"></i></a></div></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts" id="recent-posts"><div class="recent-post-item"><div class="post_cover left"><a href="/2023/05/29/hexo-%E5%88%87%E6%8D%A2%E4%B8%BB%E9%A2%98/" title="hexo-切换主题"><img class="post-bg" src="https://tse3-mm.cn.bing.net/th/id/OIP-C.nzZHvPW4TzWzHEnMhVZLsgHaEK?pid=ImgDet&amp;rs=1" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="hexo-切换主题"></a></div><div class="recent-post-info"><a class="article-title" href="/2023/05/29/hexo-%E5%88%87%E6%8D%A2%E4%B8%BB%E9%A2%98/" title="hexo-切换主题">hexo-切换主题</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2023-05-29T03:20:34.000Z" title="Created 2023-05-29 11:20:34">2023-05-29</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/hexo/">hexo</a></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/hexo/">hexo</a></span></div><div class="content">一、主题切换不管是在windos、linux、还是在docker 中 操作都一样。先在github上找到喜欢的主题，然后在 blog目录下 下载下来，然后看看主题有没有需&gt;要添加的渲染插件，有的话也下载下，然后在 _config.yml文件中切换为新添加的主题&gt;，重启即可。下载的主题会存放到blog&#x2F;theme 文件夹下
+以butterfly主题为例：
+下载主题：
+cd /root/data/docker_data/hexo/bloggit clone -b master https://github.com/jerryc127/hexo-theme-butterfly.git themes/butterfly
+添加渲染器插件：
+docker exec -it hexo bash  #进入docker容器内部  其他系统则不需要，windows用git bash 打开即可npm install hexo-renderer-pug hexo-renderer-stylus --save
+在 _config.yml文件中切换为新添加的主题
+# Extensions## ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2023/05/24/19-hexo-docker%E9%83%A8%E7%BD%B2%E7%AC%94%E8%AE%B0/" title="hexo docker部署笔记">hexo docker部署笔记</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2023-05-24T10:37:17.000Z" title="Created 2023-05-24 18:37:17">2023-05-24</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/hexo/">hexo</a></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/">博客搭建</a></span></div><div class="content">一、选择镜像&amp;emsp;&amp;emsp;hexo的docker镜像很多，像B站上一个教程视频，用得是 spurin&#x2F;hexo 的镜像，这个镜像虽然自带hexo-admin在线管理后台，但部分服务器安装后进不去后台，我在腾讯云搭建的能进去后台，所以舍弃这个镜像，而且B站那人讲得很乱，又不细致；最后是参考https://blog.17lai.site/posts/40300608 这篇博客，但是他也有个问题，没说清楚具体步骤，也是很乱。但是他的镜像没问题，搭配上hexo-admin插件就可以流畅使用。
+二、步骤1、先下载镜像docker pull bloodstar/hexo2、采用docker-compose 进行安装镜像，建立个hexo文件夹，然后新建docker-conpose.yaml文件
+version: &#x27;3&#x27;services:  hexo:    container_name: hexo    image: bloodstar/hexo:latest    hostname: hexo    ports:      - &quot;4 ...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/2023/04/09/18-ubuntu-%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/" title="Ubuntu 软件安装"><img class="post-bg" src="https://tse3-mm.cn.bing.net/th/id/OIP-C.nzZHvPW4TzWzHEnMhVZLsgHaEK?pid=ImgDet&amp;rs=1" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Ubuntu 软件安装"></a></div><div class="recent-post-info"><a class="article-title" href="/2023/04/09/18-ubuntu-%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/" title="Ubuntu 软件安装">Ubuntu 软件安装</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2023-04-09T07:43:00.000Z" title="Created 2023-04-09 15:43:00">2023-04-09</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/linux/">linux</a></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/">软件安装</a></span></div><div class="content">
+新安装系统操作更新软件&amp;emsp; sudo apt upgrade 更新并安装所有软件  
+更改软件源备份软件源sudo mv /etc/apt/sources.list /etc/apt/sources.list.bak编辑源文件sudo vim /etc/apt/sources.list添加清华源信息
+# 默认注释了源码镜像以提高 apt update 速度，如有需要可自行取消注释deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal main restricted universe multiverse# deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal main restricted universe multiversedeb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal-updates main restricted universe multiverse# deb-src https: ...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/2023/03/19/17-frp-%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F-%E8%BF%9C%E7%A8%8B%E8%AE%BF%E9%97%AE%E5%AE%B6%E4%B8%AD%E7%94%B5%E8%84%91/" title="“frp-内网穿透-远程访问家中电脑”"><img class="post-bg" src="https://pic2.zhimg.com/80/v2-bebad73666764388926f4c46b0c4b429_720w.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="“frp-内网穿透-远程访问家中电脑”"></a></div><div class="recent-post-info"><a class="article-title" href="/2023/03/19/17-frp-%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F-%E8%BF%9C%E7%A8%8B%E8%AE%BF%E9%97%AE%E5%AE%B6%E4%B8%AD%E7%94%B5%E8%84%91/" title="“frp-内网穿透-远程访问家中电脑”">“frp-内网穿透-远程访问家中电脑”</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2023-03-19T01:32:00.000Z" title="Created 2023-03-19 09:32:00">2023-03-19</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E8%BD%AF%E8%B7%AF%E7%94%B1/">软路由</a></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/frp/">frp</a><span class="article-meta-link">•</span><a class="article-meta__tags" href="/tags/%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/">内网穿透</a></span></div><div class="content">
+&amp;emsp;&amp;emsp;frp用于没有公网IP的场合，比如办公室电脑连接的网络没有公网IP，你在外面就无法访问到家中电脑（除非使用向日葵等软件，这些软件也是内置了内网穿透的客户端，服务器是他们公司提供，所以这类软件不可能会免费使用，就会对客户端进行限速，远远没有windows自带的远程桌面流畅，当然也可以自制远程桌面软件）。这时就需要用到frp内网穿透，将你的电脑数据发送到frp服务器上，这样你在外网可以通过访问frp服务器来访问你家中的电脑。&amp;emsp;&amp;emsp;具体操作：需要先在具有公网IP的服务器（电脑）上安装frp服务端，再在需要被访问的电脑（或路由器）上安装frpc客户端，然后修改客户端配置文件，连接服务端，服务端打开对应的端口。
 
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p>一、选择镜像<br>&amp;emsp;&amp;emsp;hexo的docker镜像很多，像B站上一个教程视频，用得是 spurin&#x2F;hexo 的镜像，这个镜像虽然自带hexo-admin在线管理后台，但部分服务器安装后进不去后台，我在腾讯云搭建的能进去后台，所以舍弃这个镜像，而且B站那人讲得很乱，又不细致；最后是参考<a target="_blank" rel="noopener" href="https://blog.17lai.site/posts/40300608">https://blog.17lai.site/posts/40300608</a> 这篇博客，但是他也有个问题，没说清楚具体步骤，也是很乱。但是他的镜像没问题，搭配上hexo-admin插件就可以流畅使用。</p>
-<p>二、步骤<br>1、先下载镜像<code>docker pull bloodstar/hexo</code><br>2、采用docker-compose 进行安装镜像，建立个hexo文件夹，然后新建docker-conpose.yaml文件</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">version: &#x27;3&#x27;</span><br><span class="line">services:</span><br><span class="line"></span><br><span class="line">  hexo:</span><br><span class="line">    container_name: hexo</span><br><span class="line">    image: bloodstar/hexo:latest</span><br><span class="line">    hostname: hexo</span><br><span class="line">    ports:</span><br><span class="line">      - &quot;4000:4000&quot;</span><br><span class="line">    volumes:</span><br><span class="line">      - $&#123;USERDIR&#125;/hexo/blog:/app</span><br><span class="line">    environment:</span><br><span class="line">      - PUID=0</span><br><span class="line">      - PGID=0</span><br><span class="line">      - TZ=Asia/Shanghai</span><br><span class="line">      - GIT_USER=&quot;laohu-one&quot;</span><br><span class="line">      - GIT_EMAIL=&quot;424362229@qq.com&quot;</span><br><span class="line"></span><br><span class="line">      # 主要为了内部npm网络访问顺利</span><br><span class="line">      # - HTTP_PROXY=http://192.168.0.100:1089</span><br><span class="line">      # - HTTPS_PROXY=http://192.168.0.100:1089</span><br><span class="line">    restart: always</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<p>这两个- PUID&#x3D;0   - PGID&#x3D;0  的值可通过linux 命令查看下  不知道直接删了也行  </p>
-<pre><code>volumes:
-  - $&#123;USERDIR&#125;/hexo/blog:/app
-  
-</code></pre>
-<p>   这是hexo的安装位置，之后blog文件都放在这个&#x2F;hexo&#x2F;blog这个路径下面，然后&#x2F;app是指映射到容器内的地址。<br>       ports:<br>      - “4000:4000”</p>
-<p>  这是将容器的4000端口映射到服务器的4000端口</p>
-<pre><code>- TZ=Asia/Shanghai
-</code></pre>
-<p>这个是语言<br>      - GIT_USER&#x3D;”laohu-one”<br>      - GIT_EMAIL&#x3D;”<a href="mailto:&#52;&#50;&#x34;&#x33;&#x36;&#x32;&#50;&#50;&#57;&#x40;&#x71;&#x71;&#46;&#x63;&#x6f;&#x6d;">&#52;&#50;&#x34;&#x33;&#x36;&#x32;&#50;&#50;&#57;&#x40;&#x71;&#x71;&#46;&#x63;&#x6f;&#x6d;</a>“</p>
-<p> 这个是你的github的账号名称和邮箱，应该是不能瞎写，因为只有这个地方是验证github账号信息的，不像在windows中，还需要手动设置。</p>
-<pre><code>   restart: always
- 
-</code></pre>
-<p> 启动失败后反复重启</p>
-<p> 2、安装完后会自动生成 blog文件，以及git环境，hexo指令，npm node.js,<br> 但是不可以进行 <code>hexo d</code>指令  需要先安装 hexo-deployer-git  如果在容器内运行<code>npm ls | grep hexo-deployer-git</code>没有输出，则表示没有安装；<br> 此时则运行<code>npm install hexo-deployer-git --save</code>进行安装，然后在 ‘_config.yml’ 文件中添加git仓库地址和分支</p>
- <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line"> type: git</span><br><span class="line"> repo: git@github.com:laohu-one/laohu-one.github.io.git</span><br><span class="line"> branch: main</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<p>再将 blog中的 .ssh（默认隐藏，通过<code>ps -a</code>查看） 文件夹中的 ssh密钥添加到git用户的密钥中。即可进行 hexo d 部署</p>
-<p>3、添加hexo-admin在线编辑后台<br>先在容器内安装 <code>npm install hexo-admin --save</code>插件 ,即可进入 local:4000&#x2F;admin后台,先在设置中设置密码和加密随机数后，将生成的代码添加到_config.yml 文件中，并顺便添加 <code>deployCommand: &quot;/app/hexo-deploy.sh&quot;</code>语句，这儿是用来在线部署到github上的指令，在后台电机 部署 就会永兴这里的脚本，脚本的路径要写成全路径，相对路径测试不行，文件名记得加上 .sh ，然后创建hexo-deploy.sh这个脚本，脚本内填写<code>hexo g &amp;&amp; hexo d </code></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"># hexo-admin authentification</span><br><span class="line">admin:</span><br><span class="line">  username: laohu</span><br><span class="line">  password_hash: $2a$10$Xv/46SIPHA0SAelaZAbpLO/L7ABtmGC3Lxcu7.SmyLomUxKH6YIl.</span><br><span class="line">  secret: qwertyuiop</span><br><span class="line">  deployCommand: &quot;/app/hexo-deploy.sh&quot;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+frpc 客户端&amp;emsp;&amp;emsp;先在github上下载frp的软件包，里面包含客户端和服务端，只有十几兆大小。frp中文文档 https://github.com/fatedier/frp/blob/master/README_zh.md  frp下载地址https://github.c ...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/2023/03/15/16-petalinux%E6%93%8D%E4%BD%9C%E7%AC%94%E8%AE%B0/" title="“petalinux操作笔记”"><img class="post-bg" src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fc-ssl.duitang.com%2Fuploads%2Fblog%2F202104%2F22%2F20210422220415_2e4bd.jpg&amp;refer=http%3A%2F%2Fc-ssl.duitang.com&amp;app=2002&amp;size=f9999,10000&amp;q=a80&amp;n=0&amp;g=0n&amp;fmt=auto?sec=1681472116&amp;t=5fc793f6aa64ff88aa186fa857b5e125" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="“petalinux操作笔记”"></a></div><div class="recent-post-info"><a class="article-title" href="/2023/03/15/16-petalinux%E6%93%8D%E4%BD%9C%E7%AC%94%E8%AE%B0/" title="“petalinux操作笔记”">“petalinux操作笔记”</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2023-03-15T11:35:34.000Z" title="Created 2023-03-15 19:35:34">2023-03-15</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/linux/">linux</a></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/petalinux/">petalinux</a></span></div><div class="content">petalinux 连接ubuntu NFS服务器ubuntu开启nfs服务器1、安装nfs服务器
+sudo apt-get install nfs-kernel-server
 
-<p>三、完成。 这就完成了docker中部署hexo，并在线编辑hexo 并部署到github 的基本功能。通过访问 仓库地址 即可访问博客，后续可给该地址添加个域名和https证书。</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2023/05/24/hexo-docker%E9%83%A8%E7%BD%B2%E7%AC%94%E8%AE%B0/" data-id="cli1qlj5000006sd818lb9ucc" data-title="hexo docker部署笔记" class="article-share-link"><span class="fa fa-share">Share</span></a>
-      
-      
-      
-    </footer>
-  </div>
-  
-</article>
+2、新建一个目录作为共享目录3、编辑&#x2F;etc&#x2F;exports 文件，配置 NFS 服务路径  
+sudo gedit /etc/exports
+在diamagnetic最下方添加 &#x2F;home&#x2F;alinx&#x2F;work *(rw,sync,no_root_squash,no_subtree_check) &#x2F;home&#x2F;alinx&#x2F;work 目录为 NFS 的一个工作目录。
+4、执行下面命令重启 rpcbind 服务。nfs 是一个 RPC 程序，使用它前，需要映射好端口，通过rpcbind 设定
+sudo /etc/init.d/rpcbind restart
+5、执行下面命令重启 nfs 服务
+sudo /etc/init.d/nfs-kernel-server restart
 
 
+petalinux连接nfs服务器1、通过下面命令挂载 ...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/2023/02/26/14-arduino%E5%AE%89%E8%A3%85ESP32%E5%AD%98%E5%9C%A8%E7%9A%84%E9%97%AE%E9%A2%98%E5%8F%8A%E6%AD%A5%E9%AA%A4/" title="arduino安装ESP32库 存在的问题及步骤"><img class="post-bg" src="https://th.bing.com/th/id/OIP.YWrEHy9016Nvm5cfhwAsAwHaNK?pid=ImgDet&amp;rs=1" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="arduino安装ESP32库 存在的问题及步骤"></a></div><div class="recent-post-info"><a class="article-title" href="/2023/02/26/14-arduino%E5%AE%89%E8%A3%85ESP32%E5%AD%98%E5%9C%A8%E7%9A%84%E9%97%AE%E9%A2%98%E5%8F%8A%E6%AD%A5%E9%AA%A4/" title="arduino安装ESP32库 存在的问题及步骤">arduino安装ESP32库 存在的问题及步骤</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2023-02-26T12:43:34.000Z" title="Created 2023-02-26 20:43:34">2023-02-26</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E5%B5%8C%E5%85%A5%E5%BC%8F/">嵌入式</a></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/esp32/">esp32</a><span class="article-meta-link">•</span><a class="article-meta__tags" href="/tags/arduino/">arduino</a><span class="article-meta-link">•</span><a class="article-meta__tags" href="/tags/%E5%B5%8C%E5%85%A5%E5%BC%8F/">嵌入式</a></span></div><div class="content">
+前言&amp;emsp;我已经装过好多次库，由于之前都没做好笔记，以至于看着上次备份的ESP32离线库发呆。忘记怎么使用了。只记得模糊步骤。&amp;emsp;安装库的正常步骤，现在首选项里添加库的网址，再从管理库中选择需要的库。这里有两个坑，一个是网址一定要选择包含你需要的库的，我换了好多个网址，依然找不到ESP32的库，其次，你若是找官网库，这就考虑到网络的问题，国内下载几个G的库是相当难的。大部分库还主要在github上，我去年是这样解决的，我最开始已经安装了ESP32的库，但是由于库版本落后，没法使用，在新版本中解决了这个问题，我在添加了GitHub esp32库的网址，但最高只能搜索到2.04版本，2.05也出了，我自己尝试直接修改网址，加上2.05误打误撞可以找到了，但是每次下载了好几个小时要结束了，就提示失败，不知道是校园网的魔法不行，还是什么问题，最终我是从网上先下载了2.04的库，然后添加到库的目录下，然后再从软件中安装，这样他就只需要下载些路径配置什么就好了，就快多了。  
+&amp;emsp;这次因为没保存上次GitHub的网址，有库没法进行，就找到了有自动安装 ...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/2023/02/23/13-linux%E6%8C%87%E4%BB%A4%E7%AC%94%E8%AE%B0/" title="Linux 指令学习笔记"><img class="post-bg" src="https://tse3-mm.cn.bing.net/th/id/OIP-C.nzZHvPW4TzWzHEnMhVZLsgHaEK?pid=ImgDet&amp;rs=1" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Linux 指令学习笔记"></a></div><div class="recent-post-info"><a class="article-title" href="/2023/02/23/13-linux%E6%8C%87%E4%BB%A4%E7%AC%94%E8%AE%B0/" title="Linux 指令学习笔记">Linux 指令学习笔记</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2023-02-23T12:43:34.000Z" title="Created 2023-02-23 20:43:34">2023-02-23</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/linux/">linux</a></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/%E6%8C%87%E4%BB%A4/">指令</a></span></div><div class="content">**指令的基本格式： xxxx [-选项] [参数]
 
-  
-    <article id="post-test" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2023/05/23/test/" class="article-date">
-  <time class="dt-published" datetime="2023-05-23T14:19:00.000Z" itemprop="datePublished">2023-05-23</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2023/05/23/test/">test</a>
-    </h1>
-  
+文件操作ls 命令的参数和选项1、指令格式  ls [-a -l -h] [linux路径]  列出所在目录的列表 list&amp;emsp;-a (-all的意思) 列出所在目录所有的文件 包括隐藏文件(文件名第一个字符是.就会隐藏)&amp;emsp;-l (详细信息) 列出时间等信息。 竖向列表&amp;emsp;-h 以易于阅读的方式，显示出文件夹大小同时应用两中选项如：ls -a-l &#x2F;home&#x2F;laohu   ls -al &#x2F;home   ls -la &#x2F;home  
+laohu@ubuntu:~$ ls /home/laohubash       test                    vivado_2154.backup.log  vivado_2649.backup.jou  vivado.log          xrc.log  文档Downloads  vitis_pid21865.str      vivado_2225.backup.jou  vivad ...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/2023/02/22/11-%E8%B7%AF%E7%94%B1%E5%99%A8openwrt%E5%AE%BD%E5%B8%A6%E5%A4%9A%E6%8B%A8%E7%BD%91%E9%80%9F%E7%BF%BB%E5%80%8D/" title="openwrt 宽带多拨 网速翻倍"><img class="post-bg" src="https://www.leixue.com/uploads/2020/02/broadband.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="openwrt 宽带多拨 网速翻倍"></a></div><div class="recent-post-info"><a class="article-title" href="/2023/02/22/11-%E8%B7%AF%E7%94%B1%E5%99%A8openwrt%E5%AE%BD%E5%B8%A6%E5%A4%9A%E6%8B%A8%E7%BD%91%E9%80%9F%E7%BF%BB%E5%80%8D/" title="openwrt 宽带多拨 网速翻倍">openwrt 宽带多拨 网速翻倍</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2023-02-22T05:41:58.000Z" title="Created 2023-02-22 13:41:58">2023-02-22</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E8%BD%AF%E8%B7%AF%E7%94%B1/">软路由</a></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/openwrt/">openwrt</a><span class="article-meta-link">•</span><a class="article-meta__tags" href="/tags/%E5%AE%BD%E5%B8%A6%E5%A4%9A%E6%8B%A8/">宽带多拨</a></span></div><div class="content">原理&amp;emsp;&amp;emsp;利用openwrt软路由将两个wan连接的网络进行负载均衡，叠加，实现将两个WAN口的网速叠加到一起。用到的负载均衡插件 opkg list | grep wan3  复制中文的那个， opkg install xxx
+操作先在虚拟交换机中添加两个WAN口，同时在路由器中配置两个WAN口。在路由器网络接口中，将两个wan口进行拨号连接，连接成功后会显示两个wan口的数据流通。在openwrt 网络-负载均衡中，将配置两个wan口，最后在配置一个两个合并的wan口。具体操作如下：1、先在 接口 添加 wan1 (第一个wan口的名称)  再 添加第二个 两个的跃点数需错开 如 4，5（ 跃点小的优先级高）2、配置 成员 将刚才添加的wan口 进行设置 跃点和权重 跃点是两个路由器的优先级，权重是比例 可都设置 1。。。参考 https://www.bilibili.com/video/BV1se4y1t7nt/?  
+注意事项 问题解决最后可能两个wan口只有一个工作，另一个显示禁用，就是两个不能同时工作，则需要单独进行拨号，先确保一个连接好了 ...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/2023/02/22/10-%E5%B9%BF%E5%9F%9F%E7%BD%91%E8%AE%BF%E9%97%AE%E5%B1%80%E5%9F%9F%E7%BD%91%E5%86%85%E6%89%93%E5%8D%B0%E6%9C%BA/" title="广域网访问局域网内的打印机"><img class="post-bg" src="https://tse2-mm.cn.bing.net/th/id/OIP-C.KkXw43qbmlBbJQEpAI3LzwHaE7?pid=ImgDet&amp;rs=1" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="广域网访问局域网内的打印机"></a></div><div class="recent-post-info"><a class="article-title" href="/2023/02/22/10-%E5%B9%BF%E5%9F%9F%E7%BD%91%E8%AE%BF%E9%97%AE%E5%B1%80%E5%9F%9F%E7%BD%91%E5%86%85%E6%89%93%E5%8D%B0%E6%9C%BA/" title="广域网访问局域网内的打印机">广域网访问局域网内的打印机</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2023-02-22T04:41:58.000Z" title="Created 2023-02-22 12:41:58">2023-02-22</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E8%BD%AF%E8%B7%AF%E7%94%B1/">软路由</a></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/openwrt/">openwrt</a><span class="article-meta-link">•</span><a class="article-meta__tags" href="/tags/%E6%89%93%E5%8D%B0%E6%9C%BA/">打印机</a></span></div><div class="content">带wifi的打印机外网访问打印机端口&amp;emsp;&amp;emsp; 将路由器所在局域网的IP地址进行端口转发。&amp;emsp;&amp;emsp; 转发 9100端口 用于打印&amp;emsp;&amp;emsp; 80 端口 管理界面 下载驱动&amp;emsp;&amp;emsp; 160-162 端口 在Windows7  下用于发现网络打印机&amp;emsp; 最后广域网访问路由器IP即可，若路由器无公网ip，则进行内网穿透。
+不带wifi的打印机方案一 将打印机连接至电脑，利用windows自带的共享打印机&amp;emsp;&amp;emsp;电脑打开共享设置后，其他电脑可以访问该电脑的打印机进行远程打印，但是windows的共享设置漏洞很多很多。先说下我的解决方案，网上看了好多，每个人的解决路径很多，但别人不一定适用，得自己琢磨。我在windows10 测试与打印机连接正常后，开始用另一台win11连接。先将win10 的共享打印机设置打开，在控制面板-共享网络-高级共享设置 将共享打印机服务打开（网上操作步骤很多），最后在win11的文件夹查找\192 ...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/2023/02/18/09-windows%E8%BF%9E%E6%8E%A5L2TPVPN/" title="windows连接L2TPVPN"><img class="post-bg" src="https://th.bing.com/th/id/OIP.fpg8X6_8KY8XTM9z-Og0rQAAAA?pid=ImgDet&amp;rs=1" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="windows连接L2TPVPN"></a></div><div class="recent-post-info"><a class="article-title" href="/2023/02/18/09-windows%E8%BF%9E%E6%8E%A5L2TPVPN/" title="windows连接L2TPVPN">windows连接L2TPVPN</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2023-02-18T11:54:17.000Z" title="Created 2023-02-18 19:54:17">2023-02-18</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E8%BD%AF%E8%B7%AF%E7%94%B1/">软路由</a></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/vpn/">vpn</a></span></div><div class="content">连接VPNwindows自带VPN功能，win10和win11操作都一样，先在网络里添加VPN适配器名称自定义，其他都得输入，输入后连接。  
+强烈建议直接按问题一和问题二的步骤添加注册表，一般两个问题都会有！！！
+问题一无法建立计算机与VPN服务器之际的网络连接，因为远程服务器未响应。这可能是因为。。。  
+问题二问题一解决完还不行，又出现什么  协商 遇到一个处理错误
+无论win10还是win11都有这两个的问题，所以直接添加两个注册表和修改下连接属性即可解决解决方案：1、打开注册表，快捷键 win + r，然后点击运行，输入regedit  
 
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p>一、测试<br>    1、12423565632<br>   2、我确认我确认</p>
-<p>二、大的<br>    1243<br><img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub Logo"></p>
-<p><img src="https://t7.baidu.com/it/u=2531125946,3055766435&fm=193&f=GIF" alt="gagag"></p>
-<p>aaaaa</p>
-<p>[root@localhost blog]# mkdir script[root@localhost script]# vim hexo-d.sh[root@localhost script]# cat hexo-d.sh hexo g &amp;&amp; hexo d[root@localhost script]# chmod +x hexo-d.sh</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2023/05/23/test/" data-id="cli12nwvk00001kd86kho56b2" data-title="test" class="article-share-link"><span class="fa fa-share">Share</span></a>
-      
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-hello-world" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2023/05/23/hello-world/" class="article-date">
-  <time class="dt-published" datetime="2023-05-23T02:16:47.976Z" itemprop="datePublished">2023-05-23</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2023/05/23/hello-world/">Hello World</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2023/05/23/hello-world/" data-id="clhznb7a700007td851tmgdqh" data-title="Hello World" class="article-share-link"><span class="fa fa-share">Share</span></a>
-      
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-
-
-</section>
-        
-          <aside id="sidebar">
-  
-    
-
-  
-    
-
-  
-    
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Archives</h3>
-    <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/05/">May 2023</a></li></ul>
-    </div>
-  </div>
-
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Recent Posts</h3>
-    <div class="widget">
-      <ul>
-        
-          <li>
-            <a href="/2023/05/24/hexo-docker%E9%83%A8%E7%BD%B2%E7%AC%94%E8%AE%B0/">hexo docker部署笔记</a>
-          </li>
-        
-          <li>
-            <a href="/2023/05/23/test/">test</a>
-          </li>
-        
-          <li>
-            <a href="/2023/05/23/hello-world/">Hello World</a>
-          </li>
-        
-      </ul>
-    </div>
-  </div>
-
-  
-</aside>
-        
-      </div>
-      <footer id="footer">
-  
-  <div class="outer">
-    <div id="footer-info" class="inner">
-      
-      &copy; 2023 John Doe<br>
-      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
-    </div>
-  </div>
-</footer>
-
-    </div>
-    <nav id="mobile-nav">
-  
-    <a href="/" class="mobile-nav-link">Home</a>
-  
-    <a href="/archives" class="mobile-nav-link">Archives</a>
-  
-</nav>
-    
-
-
-<script src="/js/jquery-3.6.4.min.js"></script>
-
-
-
-  
-<script src="/fancybox/jquery.fancybox.min.js"></script>
-
-
-
-
-<script src="/js/script.js"></script>
-
-
-
-
-
-  </div>
-</body>
-</html>
+2、设置注册表项
+首先，找到注册表项：HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\PolicyAgent，检查是否有AssumeUDPEncapsulationContextOnSendRule，如果有，则编辑，设置值为2;
+如果没有，则创建一个，右键选择 新建&gt; DWORD（32 位）值，名称为AssumeUDPEncapsulationContextOnSendRul ...</div></div></div><nav id="pagination"><div class="pagination"><span class="page-number current">1</span><a class="page-number" href="/page/2/#content-inner">2</a><a class="extend next" rel="next" href="/page/2/#content-inner"><i class="fas fa-chevron-right fa-fw"></i></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/img/touxiang.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">侯昌虎</div><div class="author-info__description">跟着心走，那就是对的</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">20</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">28</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">9</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/laohu-one"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/laohu-one" target="_blank" title="Github"><i class="fab fa-github" style="color: #24292e;"></i></a><a class="social-icon" href="mailto:424362229@qq.com" target="_blank" title="Email"><i class="fas fa-envelope" style="color: #4a7dbe;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>Announcement</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Post</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2023/05/29/hexo-%E5%88%87%E6%8D%A2%E4%B8%BB%E9%A2%98/" title="hexo-切换主题"><img src="https://tse3-mm.cn.bing.net/th/id/OIP-C.nzZHvPW4TzWzHEnMhVZLsgHaEK?pid=ImgDet&amp;rs=1" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="hexo-切换主题"/></a><div class="content"><a class="title" href="/2023/05/29/hexo-%E5%88%87%E6%8D%A2%E4%B8%BB%E9%A2%98/" title="hexo-切换主题">hexo-切换主题</a><time datetime="2023-05-29T03:20:34.000Z" title="Created 2023-05-29 11:20:34">2023-05-29</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/05/24/19-hexo-docker%E9%83%A8%E7%BD%B2%E7%AC%94%E8%AE%B0/" title="hexo docker部署笔记">hexo docker部署笔记</a><time datetime="2023-05-24T10:37:17.000Z" title="Created 2023-05-24 18:37:17">2023-05-24</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/04/09/18-ubuntu-%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/" title="Ubuntu 软件安装"><img src="https://tse3-mm.cn.bing.net/th/id/OIP-C.nzZHvPW4TzWzHEnMhVZLsgHaEK?pid=ImgDet&amp;rs=1" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Ubuntu 软件安装"/></a><div class="content"><a class="title" href="/2023/04/09/18-ubuntu-%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/" title="Ubuntu 软件安装">Ubuntu 软件安装</a><time datetime="2023-04-09T07:43:00.000Z" title="Created 2023-04-09 15:43:00">2023-04-09</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/03/19/17-frp-%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F-%E8%BF%9C%E7%A8%8B%E8%AE%BF%E9%97%AE%E5%AE%B6%E4%B8%AD%E7%94%B5%E8%84%91/" title="“frp-内网穿透-远程访问家中电脑”"><img src="https://pic2.zhimg.com/80/v2-bebad73666764388926f4c46b0c4b429_720w.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="“frp-内网穿透-远程访问家中电脑”"/></a><div class="content"><a class="title" href="/2023/03/19/17-frp-%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F-%E8%BF%9C%E7%A8%8B%E8%AE%BF%E9%97%AE%E5%AE%B6%E4%B8%AD%E7%94%B5%E8%84%91/" title="“frp-内网穿透-远程访问家中电脑”">“frp-内网穿透-远程访问家中电脑”</a><time datetime="2023-03-19T01:32:00.000Z" title="Created 2023-03-19 09:32:00">2023-03-19</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/03/15/16-petalinux%E6%93%8D%E4%BD%9C%E7%AC%94%E8%AE%B0/" title="“petalinux操作笔记”"><img src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fc-ssl.duitang.com%2Fuploads%2Fblog%2F202104%2F22%2F20210422220415_2e4bd.jpg&amp;refer=http%3A%2F%2Fc-ssl.duitang.com&amp;app=2002&amp;size=f9999,10000&amp;q=a80&amp;n=0&amp;g=0n&amp;fmt=auto?sec=1681472116&amp;t=5fc793f6aa64ff88aa186fa857b5e125" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="“petalinux操作笔记”"/></a><div class="content"><a class="title" href="/2023/03/15/16-petalinux%E6%93%8D%E4%BD%9C%E7%AC%94%E8%AE%B0/" title="“petalinux操作笔记”">“petalinux操作笔记”</a><time datetime="2023-03-15T11:35:34.000Z" title="Created 2023-03-15 19:35:34">2023-03-15</time></div></div></div></div><div class="card-widget card-categories"><div class="item-headline">
+            <i class="fas fa-folder-open"></i>
+            <span>Categories</span>
+            <a class="card-more-btn" href="/categories/" title="More">
+    <i class="fas fa-angle-right"></i></a>
+            </div>
+            <ul class="card-category-list" id="aside-cat-list">
+            <li class="card-category-list-item "><a class="card-category-list-link" href="/categories/FPGA/"><span class="card-category-list-name">FPGA</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/PLC/"><span class="card-category-list-name">PLC</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/hexo/"><span class="card-category-list-name">hexo</span><span class="card-category-list-count">3</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/linux/"><span class="card-category-list-name">linux</span><span class="card-category-list-count">3</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E5%B5%8C%E5%85%A5%E5%BC%8F/"><span class="card-category-list-name">嵌入式</span><span class="card-category-list-count">2</span></a><ul class="card-category-list child"><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E5%B5%8C%E5%85%A5%E5%BC%8F/%E8%87%AA%E5%8A%A8%E6%8E%A7%E5%88%B6/"><span class="card-category-list-name">自动控制</span><span class="card-category-list-count">1</span></a></li></ul></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E7%89%A9%E8%81%94%E7%BD%91/"><span class="card-category-list-name">物联网</span><span class="card-category-list-count">3</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E8%84%9A%E6%9C%AC/"><span class="card-category-list-name">脚本</span><span class="card-category-list-count">1</span></a></li>
+            </ul></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>Tags</span></div><div class="card-tag-cloud"><a href="/tags/hexo/" style="font-size: 1.3em; color: #99a1ac">hexo</a> <a href="/tags/%E6%89%93%E5%8D%B0%E6%9C%BA/" style="font-size: 1.1em; color: #999">打印机</a> <a href="/tags/%E9%98%BF%E9%87%8C%E4%BA%91-MQTT/" style="font-size: 1.1em; color: #999">阿里云 MQTT</a> <a href="/tags/%E6%9D%BF%E7%90%83%E6%8E%A7%E5%88%B6%E7%B3%BB%E7%BB%9F/" style="font-size: 1.1em; color: #999">板球控制系统</a> <a href="/tags/%E6%8C%87%E4%BB%A4/" style="font-size: 1.1em; color: #999">指令</a> <a href="/tags/app/" style="font-size: 1.1em; color: #999">app</a> <a href="/tags/%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/" style="font-size: 1.1em; color: #999">内网穿透</a> <a href="/tags/CMD-bat%E8%84%9A%E6%9C%AC/" style="font-size: 1.1em; color: #999">CMD bat脚本</a> <a href="/tags/%E5%AE%BD%E5%B8%A6%E5%A4%9A%E6%8B%A8/" style="font-size: 1.1em; color: #999">宽带多拨</a> <a href="/tags/%E9%98%BF%E9%87%8C%E4%BA%91mqtt/" style="font-size: 1.1em; color: #999">阿里云mqtt</a> <a href="/tags/FPGA/" style="font-size: 1.1em; color: #999">FPGA</a> <a href="/tags/labview%E4%B8%8A%E4%BD%8D%E6%9C%BA/" style="font-size: 1.1em; color: #999">labview上位机</a> <a href="/tags/frp/" style="font-size: 1.1em; color: #999">frp</a> <a href="/tags/esp32-mqtt/" style="font-size: 1.1em; color: #999">esp32 mqtt</a> <a href="/tags/md%E8%AF%AD%E6%B3%95/" style="font-size: 1.1em; color: #999">md语法 </a> <a href="/tags/vpn/" style="font-size: 1.1em; color: #999">vpn</a> <a href="/tags/%E4%B8%B2%E7%BA%A7PID%E6%8E%A7%E5%88%B6%E7%AE%97%E6%B3%95/" style="font-size: 1.1em; color: #999">串级PID控制算法</a> <a href="/tags/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/" style="font-size: 1.1em; color: #999">软件安装</a> <a href="/tags/openmv%E6%9C%BA%E5%99%A8%E8%A7%86%E8%A7%89/" style="font-size: 1.1em; color: #999">openmv机器视觉</a> <a href="/tags/STM32/" style="font-size: 1.1em; color: #999">STM32</a> <a href="/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/" style="font-size: 1.1em; color: #999">博客搭建</a> <a href="/tags/esp8266/" style="font-size: 1.3em; color: #99a1ac">esp8266</a> <a href="/tags/openwrt/" style="font-size: 1.5em; color: #99a9bf">openwrt</a> <a href="/tags/arduino/" style="font-size: 1.1em; color: #999">arduino</a> <a href="/tags/appinventer/" style="font-size: 1.1em; color: #999">appinventer</a> <a href="/tags/petalinux/" style="font-size: 1.1em; color: #999">petalinux</a> <a href="/tags/%E5%B5%8C%E5%85%A5%E5%BC%8F/" style="font-size: 1.1em; color: #999">嵌入式</a> <a href="/tags/esp32/" style="font-size: 1.1em; color: #999">esp32</a></div></div><div class="card-widget card-archives"><div class="item-headline"><i class="fas fa-archive"></i><span>Archives</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/05/"><span class="card-archive-list-date">May 2023</span><span class="card-archive-list-count">2</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/04/"><span class="card-archive-list-date">April 2023</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/03/"><span class="card-archive-list-date">March 2023</span><span class="card-archive-list-count">2</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/02/"><span class="card-archive-list-date">February 2023</span><span class="card-archive-list-count">7</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2022/11/"><span class="card-archive-list-date">November 2022</span><span class="card-archive-list-count">7</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2022/10/"><span class="card-archive-list-date">October 2022</span><span class="card-archive-list-count">1</span></a></li></ul></div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>Info</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">Article :</div><div class="item-count">20</div></div><div class="webinfo-item"><div class="item-name">UV :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">PV :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">Last Push :</div><div class="item-count" id="last-push-date" data-lastPushDate="2023-05-30T02:38:42.135Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2023 By 侯昌虎</div><div class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="Toggle Between Light And Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle between single-column and double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="Setting"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="Back To Top"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.umd.min.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
