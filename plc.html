@@ -1,0 +1,232 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>200SMART PLC单片机 | LaohuのBlog</title><meta name="author" content="侯昌虎"><meta name="copyright" content="侯昌虎"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="前言　　200smart使用的是STEP 7-MicroWIN SMART 这款开发软件，相比博途软件要容易，方便的多。 但是他无法模拟仿真，必须接200smart单片机才可以仿真。 200SMART io输出也分型号，有的是继电器输出口，有的是晶体管输出，按需求选择型号。PIC功能相对较少，默认只有I&#x2F;O控制和485，网卡通信，AD模拟输入输出需要外接模块。 S7 200SMART 手">
+<meta property="og:type" content="article">
+<meta property="og:title" content="200SMART PLC单片机">
+<meta property="og:url" content="https://laohu-one.github.io/plc.html">
+<meta property="og:site_name" content="LaohuのBlog">
+<meta property="og:description" content="前言　　200smart使用的是STEP 7-MicroWIN SMART 这款开发软件，相比博途软件要容易，方便的多。 但是他无法模拟仿真，必须接200smart单片机才可以仿真。 200SMART io输出也分型号，有的是继电器输出口，有的是晶体管输出，按需求选择型号。PIC功能相对较少，默认只有I&#x2F;O控制和485，网卡通信，AD模拟输入输出需要外接模块。 S7 200SMART 手">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://pic1.zhimg.com/v2-7c6505eed9db133f0d85db3315335864_r.jpg">
+<meta property="article:published_time" content="2023-07-14T01:20:31.000Z">
+<meta property="article:modified_time" content="2023-07-17T09:16:35.051Z">
+<meta property="article:author" content="侯昌虎">
+<meta property="article:tag" content="PLC">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://pic1.zhimg.com/v2-7c6505eed9db133f0d85db3315335864_r.jpg"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://laohu-one.github.io/plc.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":230},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: {"limitCount":80,"languages":{"author":"作者: 侯昌虎","link":"链接: ","source":"来源: LaohuのBlog","info":"著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。"}},
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '200SMART PLC单片机',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2023-07-17 17:16:35'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+    win.getCSS = (url,id = false) => new Promise((resolve, reject) => {
+      const link = document.createElement('link')
+      link.rel = 'stylesheet'
+      link.href = url
+      if (id) link.id = id
+      link.onerror = reject
+      link.onload = link.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        link.onload = link.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(link)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><link rel="stylesheet" href="//at.alicdn.com/t/c/font_4094579_df7va6toeq.css"><meta name="generator" content="Hexo 6.3.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/touxiang.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">23</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">29</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">11</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 目录</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw iconfont icon-icon-lift"></i><span> 工具</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" target="_blank" rel="noopener" href="https://yun.laohu.space"><i class="fa-fw iconfont icon-daohang-kucun"></i><span> 个人网盘</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://tu.laohu.space"><i class="fa-fw iconfont icon-icon-picture"></i><span> 共享图床</span></a></li></ul></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://pic1.zhimg.com/v2-7c6505eed9db133f0d85db3315335864_r.jpg')"><nav id="nav"><span id="blog-info"><a href="/" title="LaohuのBlog"><span class="site-name">LaohuのBlog</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 目录</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw iconfont icon-icon-lift"></i><span> 工具</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" target="_blank" rel="noopener" href="https://yun.laohu.space"><i class="fa-fw iconfont icon-daohang-kucun"></i><span> 个人网盘</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://tu.laohu.space"><i class="fa-fw iconfont icon-icon-picture"></i><span> 共享图床</span></a></li></ul></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">200SMART PLC单片机</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2023-07-14T01:20:31.000Z" title="发表于 2023-07-14 09:20:31">2023-07-14</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2023-07-17T09:16:35.051Z" title="更新于 2023-07-17 17:16:35">2023-07-17</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="200SMART PLC单片机"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>　　200smart使用的是STEP 7-MicroWIN SMART 这款开发软件，相比博途软件要容易，方便的多。 但是他无法模拟仿真，必须接200smart单片机才可以仿真。</p>
+<p>200SMART io输出也分型号，有的是继电器输出口，有的是晶体管输出，按需求选择型号。PIC功能相对较少，默认只有I&#x2F;O控制和485，网卡通信，AD模拟输入输出需要外接模块。</p>
+<p>S7 200SMART 手册 &lt;<a target="_blank" rel="noopener" href="https://yun.laohu.space/share/2aK4cOuV">https://yun.laohu.space/share/2aK4cOuV</a></p>
+<blockquote>
+</blockquote>
+<h3 id="控制io输入-x2F-输出"><a href="#控制io输入-x2F-输出" class="headerlink" title="控制io输入&#x2F;输出"></a>控制io输入&#x2F;输出</h3><h4 id="硬件介绍"><a href="#硬件介绍" class="headerlink" title="硬件介绍"></a>硬件介绍</h4><p><img src="https://tu.laohu.space/i/29d4b33c8780ab87724470d746aca1f9/29d4b33c8780ab87724470d746aca1f9.jpg" alt="微信截图_20230714101932.jpg"></p>
+<p><strong>PLC的输入和输出是看他回路的通断决定他是开还是关，与输入&#x2F;输出电压的高低电平无关。</strong>	</p>
+<p>输入是在单片机的上面，DIa和DIb两部分，对应的引脚端地址分别为 I0.0-I0.7 I1.0-I0.3  </p>
+<p>比如在接开关时，开关的一端接 I0.0另一端接1M口，同时1M口需要外接开关能承受的电源+，从而构成回路；  </p>
+<p>同理，DO0-DO7 为输出口，1L 2L分别为两块区域的闭合回路端</p>
+<h4 id="程序设计"><a href="#程序设计" class="headerlink" title="程序设计"></a>程序设计</h4><h4 id="下载程序"><a href="#下载程序" class="headerlink" title="下载程序"></a>下载程序</h4><p>使用网线连接，使PLC和电脑共处同一网关下，通过软件上的PLC查找，即可找到该plc，也可直接将plc插电脑上。<br><img src="https://tu.laohu.space/i/5af6dcb7947ec8b64b620d3effff0e5d/5af6dcb7947ec8b64b620d3effff0e5d.jpg" alt="微信截图_20230714093312.jpg"></p>
+<p>之后点击编译，下载，开启仿真，开启状态图表监控，即可仿真，状态图标直接填写想要查看的变量地址，即可。</p>
+<p><img src="https://tu.laohu.space/i/5d76f384f74aa5c13254491f3117263b/5d76f384f74aa5c13254491f3117263b.jpg" alt="微信截图_20230714144256.jpg"></p>
+<p>Q.0.4<br>  （ S ）　　表示一个线圈，指的是输出IO的控制，S表示开启，置位，R表示关闭。复位。　Q0.4表示D0.4的IO口打开，１表示从Q０.４开始，顺序打开<br>　1   　　IO口的数量。</p>
+<p>V130<br>｜　｜  表示常开开关，V130表示地址，这里的V130只是虚拟的开关，虚拟寄存器。</p>
+<h3 id="485通信-接受"><a href="#485通信-接受" class="headerlink" title="485通信-接受"></a>485通信-接受</h3><p><img src="https://tu.laohu.space/i/144e2194ba65c1282c69a5e7150cfafe/144e2194ba65c1282c69a5e7150cfafe.jpg" alt="微信截图_20230714145656.jpg"></p>
+<p>配置485的数据  </p>
+<p><img src="https://tu.laohu.space/i/0a85632e67a3c5c03013a6dac703a90e/0a85632e67a3c5c03013a6dac703a90e.jpg" alt="微信截图_20230714145809.jpg"></p>
+<p>中断接受</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="https://laohu-one.github.io">侯昌虎</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://laohu-one.github.io/plc.html">https://laohu-one.github.io/plc.html</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://laohu-one.github.io" target="_blank">LaohuのBlog</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/PLC/">PLC</a></div><div class="post_share"></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/yolov5.html" title="linux板上运行yolov5 目标检测"><img class="cover" src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9tbWJpei5xcGljLmNuL21tYml6X3BuZy84U0lYdjBOclZBbmt2b21zTzVnMVcweDNpYlZVdDJ6YzJKMFRGQlVpY0hJalZkN0gxbWdmMVdoaWNPUERQNG1NT040aWFqUVN5SmZUVk9TbWJ5WlJiMW5HWGcvNjQw?x-oss-process=image/format,png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">linux板上运行yolov5 目标检测</div></div></a></div><div class="next-post pull-right"><a href="/nginx.html" title="部署 Nginx Proxy Manger 反向代理 配置阿里云SSL证书"><img class="cover" src="https://tu.laohu.space/i/2023/05/30/6475d534344a9.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">部署 Nginx Proxy Manger 反向代理 配置阿里云SSL证书</div></div></a></div></nav><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div id="twikoo-wrap"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/img/touxiang.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">侯昌虎</div><div class="author-info__description">跟着心走，那就是对的</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">23</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">29</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">11</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="http://changhu.tpddns.cn:4000"><i></i><span>点击进入本站的高速网址</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="tencent://AddContact/?fromId=45&amp;fromSubId=1&amp;subcmd=all&amp;uin=424362229" target="_blank" title=""><i class="iconfont icon-qq"></i></a><a class="social-icon" href="https://s1.ax1x.com/2023/06/08/pCAuKzt.jpg" target="_blank" title=""><i class="iconfont icon-weixin"></i></a><a class="social-icon" href="https://github.com/laohu-one" target="_blank" title="Github"><i class="fab fa-github" style="color: #24292e;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">记录自己的折腾笔记，记性不太好，得找个本本记记，有一起折腾的可以参考我的文章，有问题在评论区讨论。</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%89%8D%E8%A8%80"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8E%A7%E5%88%B6io%E8%BE%93%E5%85%A5-x2F-%E8%BE%93%E5%87%BA"><span class="toc-number">2.</span> <span class="toc-text">控制io输入&#x2F;输出</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%A1%AC%E4%BB%B6%E4%BB%8B%E7%BB%8D"><span class="toc-number">2.1.</span> <span class="toc-text">硬件介绍</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1"><span class="toc-number">2.2.</span> <span class="toc-text">程序设计</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%8B%E8%BD%BD%E7%A8%8B%E5%BA%8F"><span class="toc-number">2.3.</span> <span class="toc-text">下载程序</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#485%E9%80%9A%E4%BF%A1-%E6%8E%A5%E5%8F%97"><span class="toc-number">3.</span> <span class="toc-text">485通信-接受</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/yolov5.html" title="linux板上运行yolov5 目标检测"><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9tbWJpei5xcGljLmNuL21tYml6X3BuZy84U0lYdjBOclZBbmt2b21zTzVnMVcweDNpYlZVdDJ6YzJKMFRGQlVpY0hJalZkN0gxbWdmMVdoaWNPUERQNG1NT040aWFqUVN5SmZUVk9TbWJ5WlJiMW5HWGcvNjQw?x-oss-process=image/format,png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="linux板上运行yolov5 目标检测"/></a><div class="content"><a class="title" href="/yolov5.html" title="linux板上运行yolov5 目标检测">linux板上运行yolov5 目标检测</a><time datetime="2023-07-17T06:18:45.000Z" title="发表于 2023-07-17 14:18:45">2023-07-17</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/plc.html" title="200SMART PLC单片机"><img src="https://pic1.zhimg.com/v2-7c6505eed9db133f0d85db3315335864_r.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="200SMART PLC单片机"/></a><div class="content"><a class="title" href="/plc.html" title="200SMART PLC单片机">200SMART PLC单片机</a><time datetime="2023-07-14T01:20:31.000Z" title="发表于 2023-07-14 09:20:31">2023-07-14</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/nginx.html" title="部署 Nginx Proxy Manger 反向代理 配置阿里云SSL证书"><img src="https://tu.laohu.space/i/2023/05/30/6475d534344a9.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="部署 Nginx Proxy Manger 反向代理 配置阿里云SSL证书"/></a><div class="content"><a class="title" href="/nginx.html" title="部署 Nginx Proxy Manger 反向代理 配置阿里云SSL证书">部署 Nginx Proxy Manger 反向代理 配置阿里云SSL证书</a><time datetime="2023-07-10T09:05:10.000Z" title="发表于 2023-07-10 17:05:10">2023-07-10</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/mp157.html" title="嵌入式linux mp157 开发"><img src="https://tse3-mm.cn.bing.net/th/id/OIP-C.nzZHvPW4TzWzHEnMhVZLsgHaEK?pid=ImgDet&amp;rs=1" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="嵌入式linux mp157 开发"/></a><div class="content"><a class="title" href="/mp157.html" title="嵌入式linux mp157 开发">嵌入式linux mp157 开发</a><time datetime="2023-06-13T08:34:55.000Z" title="发表于 2023-06-13 16:34:55">2023-06-13</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/do-ipsce.html" title="docker 部署 ipsec 服务器"><img src="https://pic3.zhimg.com/80/v2-ede5e509f2c00a447134024105e4e2de_720w.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="docker 部署 ipsec 服务器"/></a><div class="content"><a class="title" href="/do-ipsce.html" title="docker 部署 ipsec 服务器">docker 部署 ipsec 服务器</a><time datetime="2023-06-11T07:52:10.000Z" title="发表于 2023-06-11 15:52:10">2023-06-11</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2023 By 侯昌虎</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.umd.min.js"></script><div class="js-pjax"><script>(()=>{
+  const init = () => {
+    twikoo.init(Object.assign({
+      el: '#twikoo-wrap',
+      envId: 'https://twikoo.laohu.space',
+      region: '',
+      onCommentLoaded: function () {
+        btf.loadLightbox(document.querySelectorAll('#twikoo .tk-content img:not(.tk-owo-emotion)'))
+      }
+    }, null))
+  }
+
+  const getCount = () => {
+    const countELement = document.getElementById('twikoo-count')
+    if(!countELement) return
+    twikoo.getCommentsCount({
+      envId: 'https://twikoo.laohu.space',
+      region: '',
+      urls: [window.location.pathname],
+      includeReply: false
+    }).then(function (res) {
+      countELement.textContent = res[0].count
+    }).catch(function (err) {
+      console.error(err);
+    });
+  }
+
+  const runFn = () => {
+    init()
+    
+  }
+
+  const loadTwikoo = () => {
+    if (typeof twikoo === 'object') {
+      setTimeout(runFn,0)
+      return
+    } 
+    getScript('https://cdn.jsdelivr.net/npm/twikoo/dist/twikoo.all.min.js').then(runFn)
+  }
+
+  if ('Twikoo' === 'Twikoo' || !false) {
+    if (false) btf.loadComment(document.getElementById('twikoo-wrap'), loadTwikoo)
+    else loadTwikoo()
+  } else {
+    window.loadOtherComment = () => {
+      loadTwikoo()
+    }
+  }
+})()</script></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
